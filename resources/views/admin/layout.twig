@@ -1,0 +1,70 @@
+<div class="card">
+    <div class="card-block">
+        <div class="row">
+            <div class="col-sm-24">
+                <div class="row">
+                    <div class="col-sm-6">
+                        {{ form.fields.headline.label|raw }}
+                        {{ form.fields.headline.input|raw }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin:20px 0 0;">
+            <li class="nav-item active">
+                <a class="nav-link active" id="{{form.options.block_instance}}_col-1-tab" data-toggle="tab" href="#{{form.options.block_instance}}_col-1" role="tab" aria-controls="{{form.options.block_instance}}_col-1" aria-selected="true">Content</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="{{form.options.block_instance}}_col-2-tab" data-toggle="tab" href="#{{form.options.block_instance}}_col-2" role="tab" aria-controls="{{form.options.block_instance}}_col-2" aria-selected="false">Image</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="{{form.options.block_instance}}_col-3-tab" data-toggle="tab" href="#{{form.options.block_instance}}_col-3" role="tab" aria-controls="{{form.options.block_instance}}_col-3" aria-selected="false">Settings</a>
+            </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content" style="background:#ececec;padding:10px;">
+            <div class="tab-pane active" id="{{form.options.block_instance}}_col-1" role="tabpanel" aria-labelledby="{{form.options.block_instance}}_col-1-tab">
+                <div class="row">
+                    <div class="col-sm-24">
+                        <div class="row space-top">
+                            <div class="col-sm-24">
+                                {{ form.fields.content|raw }}  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="{{form.options.block_instance}}_col-2" role="tabpanel" aria-labelledby="{{form.options.block_instance}}_col-2-tab">
+                <div class="row">
+                    <div class="col-sm-24">
+                        <div class="row">
+                            <div class="col-sm-24 form-group">
+                                {{ form.fields.image.label|raw }}
+                                {{ form.fields.image.input|raw }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="{{form.options.block_instance}}_col-3" role="tabpanel" aria-labelledby="{{form.options.block_instance}}_col-3-tab">
+                <div class="row">
+                    <div class="col-sm-24">
+                        <div class="row">
+                            <div class="col-sm-24 form-group">
+                                {{ form.fields.background|raw }}
+                            </div>
+                            <div class="col-sm-24 form-group">
+                                {{ form.fields.content_position|raw }}
+                            </div>
+                            <div class="col-sm-24 form-group">
+                                {{ form.fields.color|raw }}
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
