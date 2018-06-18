@@ -1,0 +1,13 @@
+<style type="text/css">
+    {% for block in page.block %}
+        {% if block.extension.value.slug == 'spotlight_block' %}
+            #block--{{block.id}} .content 
+           
+            {
+                background: {{block.background | raw}};
+                color: {{block.color | raw}};
+                height:100%;
+            }
+        {% endif %}
+    {% endfor %}
+</style>

@@ -1,10 +1,10 @@
 <div class="row">
-    <div class="col-md-4 no-gutters image_wrapper">
+    <div class="{{ block.image_column_size|default('col-md-4') }}  no-gutters image_wrapper">
         <div class="image">
             {{block.image.make()|raw}}
         </div>
     </div>
-    <div class="col-md-8 no-gutters content_wrapper ">
+    <div class="{{ block.content_column_size|default('col-md-8') }}  no-gutters content_wrapper ">
         <div class="content {{block.content_position}}">
             {{block.content |raw}}
         </div>

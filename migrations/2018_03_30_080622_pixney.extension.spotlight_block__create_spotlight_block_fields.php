@@ -1,6 +1,8 @@
 <?php
 
 use Anomaly\Streams\Platform\Database\Migration\Migration;
+use Pixney\SpotlightBlockExtension\SelectFieldType\TextColor;
+use Pixney\SpotlightBlockExtension\SelectFieldType\BackgroundColor;
 
 class PixneyExtensionSpotlightBlockCreateSpotlightBlockFields extends Migration
 {
@@ -13,25 +15,27 @@ class PixneyExtensionSpotlightBlockCreateSpotlightBlockFields extends Migration
         'image'     => [
             'type'   => 'anomaly.field_type.image',
             'config' => [
-                'aspect_ratio'  => '16:9',
+                'aspect_ratio'  => '1:1',
             ]
         ],
         'content' => [
-            'type'              => 'anomaly.field_type.markdown',
+            'type'              => 'anomaly.field_type.wysiwyg',
             'config'            => [
                 'height'  => '300',
             ]
         ],
-        'background' => [
-            'type'   => 'anomaly.field_type.colorpicker',
+        'background_color' => [
+            'type'   => 'anomaly.field_type.select',
             'config' => [
-                'default_value' => '#fff',
+                'mode'          => 'dropdown',
+                'handler'       => BackgroundColor::class
             ]
         ],
-        'color' => [
-            'type'   => 'anomaly.field_type.colorpicker',
+        'text_color' => [
+            'type'   => 'anomaly.field_type.select',
             'config' => [
-                'default_value' => '#fff',
+                'mode'          => 'dropdown',
+                'handler'       => TextColor::class
             ]
         ],
         'content_position' => [
@@ -41,6 +45,10 @@ class PixneyExtensionSpotlightBlockCreateSpotlightBlockFields extends Migration
                 'default_value' => 'content--left',
                 'mode'          => 'dropdown'
             ]
-        ]
+        ],
+
+        'image_column_size'          => 'anomaly.field_type.text',
+        'content_column_size'        => 'anomaly.field_type.text',
+        'classname'                  => 'anomaly.field_type.text',
     ];
 }

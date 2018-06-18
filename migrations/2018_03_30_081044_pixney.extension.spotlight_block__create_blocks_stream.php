@@ -24,6 +24,7 @@ class PixneyExtensionSpotlightBlockCreateBlocksStream extends Migration
      * @var array
      */
     protected $assignments = [
-        'image', 'content', 'background', 'content_position', 'color'
+        'image', 'content', 'text_color', 'background_color', 'content_position',
+        'image_column_size', 'content_column_size', 'classname'
     ];
 }

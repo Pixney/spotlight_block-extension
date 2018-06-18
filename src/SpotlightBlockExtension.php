@@ -21,7 +21,7 @@ class SpotlightBlockExtension extends BlockExtension
     protected $provides = 'anomaly.module.blocks::block.spotlight';
     protected $model    = BlockModel::class;
     protected $view     = 'pixney.extension.spotlight_block::public/layout';
-    protected $wrapper  = 'pixney.theme.gudrun::blocks/wrapper';
+    protected $wrapper  = 'pixney.extension.spotlight_block::blocks/wrapper';
 
     public function getView()
     {

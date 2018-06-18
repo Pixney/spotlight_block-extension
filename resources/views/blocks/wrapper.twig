@@ -1,0 +1,6 @@
+<div
+id="block--{{ block.id | raw }}"
+class="block block--{{ block.extension.value.slug }} block--{{ block.id | raw }} {{ block.classname|default('') }}"
+>
+{{ content|raw }}
+</div>
